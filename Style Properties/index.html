@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Demo text  -->
+    <div id="id" class="txt">
+        Heading 
+    </div>
+    <div class="txt"> 
+        A Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed suscipit at nulla iste odit
+        accusantium nihil maxime. A Nisi, incidunt, perspiciatis atque ratione debitis obcaecati deleniti eveniet hic
+        dicta, dolorem et? A 
+    </div>
+    <div class="txt">
+        Sample text 3
+    </div>
+    <div name="pic" id="pic" class="pic">
+    </div>
+
+    <!-- By clicking it will change font color, size, and changed a letter to symbol   -->
+
+    <input type="submit" onclick="myFun()" /> <!--- By click we are calling function -->
+    <script>
+        function myFun() {
+          
+            var x = document.getElementsByClassName("txt");
+            
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.color = "RED";      // Applied font color as red 
+                x[i].style.fontWeight = "bold";  // Applied font style as bold
+
+                var temp1 = x[i].innerText.toLowerCase(); // Converted the text to lower case by using string method / string functions in JS
+                x[i].innerText = temp1;           // Again storing the lower case text to inner html 
+                var temp2 = x[i].innerText.replaceAll("a", "@");     // replacing all the small a letters to @.
+                x[i].innerText = temp2;       // Again storing the text after changing "a" to "@".
+
+                x[i].style.padding="10px";  // Added padding to text.
+                x[i].style.backgroundColor="black"; // Added a background color 
+                x[i].style.textAlign="center";  // Text is align to center.
+                x[i].style.margin="10px"; // Added margin to text.
+                x[i].style.border=" 2px solid red"; // Added border 2px style is solid and color is red.
+                x[i].style.borderRadius="10px";     // Added border radius 
+            }
+
+            var head = document.getElementById("id");
+            head.style.color="white";
+            head.style.fontStyle="italic";
+            head.style.fontSize="20px";
+            head.style.padding="20px";
+            head.style.wordSpacing="20px";
+            var tem = head.innerText.toUpperCase();
+            head.innerText = tem;   
+
+            // var pic = document.getElementsById("pic");
+           
+            // pic.style.padding="40px";
+            // pic.style.border="1px solid green";
+            // pic.style.marginRight="40%";
+            // pic.style.backgroundColor="yellow";
+            // document.getElementById("pic").style.src="C:\Users\DT051\Pictures\dhoni.jpg";
+            document.getElementById("pic").style.backgroundImage="url(dhoni.jpg)";
+            pic.style.height="100vh";
+            //pic.style.width="100%";
+            pic.style.margin="20px";
+            pic.style.border=" 2px solid yellow";
+            pic.style.backgroundSize="cover";
+            pic.style.backgroundRepeat="none";
+            pic.style.borderRadius="50px"; 
+        }
+
+    </script>
+</body>
+<!-- <style>
+h1{
+    backgo
+}
+</style> -->
+</html>
