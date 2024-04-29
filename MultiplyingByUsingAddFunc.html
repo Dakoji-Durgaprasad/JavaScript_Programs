@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplying by using add function</title>
+</head>
+<body>
+    <script>
+
+        console.log(mul(10,20));        // Calling mul function
+
+        function add(i,j){
+            return i + j;
+        }
+
+        function mul(i, j){
+            var ans = 0;
+            for(k = 0; k <  i; k++){
+                ans = add(ans, j);      // Calling add function
+            }
+            return ans;                 // output 200
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure in scope</title>
+</head>
+<body>
+    <script>
+        function demo(){
+            var x = 70;
+            function func1(){
+                console.log(x);
+            }
+            return func1;
+        }
+
+        var ans = demo();
+        console.log(ans);
+        ans();
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Scope</title>
+</head>
+<body>
+    <script>
+        var i =10 ;
+        {               
+            var i = 100;           // not block scope
+        }
+                    // j, k are script scope
+        let j = 5;
+        {
+            let j = 10;             // block scope 
+        }
+
+        const k = 20;
+        {
+            const k = 40;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference Error</title>
+</head>
+<body>
+    <script>
+        console.log(i);     // undefined
+        console.log(j);     // Uncaught ReferenceError: Cannot access 'j' before initialization
+        var i;
+        let j;
+    </script>
+</body>
+</html>
